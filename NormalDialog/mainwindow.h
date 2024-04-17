@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include<QProgressDialog>
+#include<QTimer>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -30,7 +31,13 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+    void on_pushButton_7_clicked();
+    void on_updateProgressDialog();
+    void on_cancelProgressDialog();
 private:
     Ui::MainWindow *ui;
+    QProgressDialog* _progressDialog;
+    QTimer* _timer;
+    int _counter;
 };
 #endif // MAINWINDOW_H

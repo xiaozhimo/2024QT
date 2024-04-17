@@ -6,11 +6,13 @@
 #include<QFileDialog>
 #include<QInputDialog>
 #include<QMessageBox>
+#include<QProgressDialog>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    _counter=0;
 }
 
 MainWindow::~MainWindow()
@@ -97,6 +99,41 @@ void MainWindow::on_pushButton_6_clicked()
    }else{
        return;
    }
+
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    _progressDialog= new QProgressDialog(tr("正在复制"),tr("取消赋值"),0,5000,this);
+    _progressDialog->setWindowTitle(tr("文件复制对话框"));
+    _progressDialog->setWindowModality(Qt::ApplicationModal);
+    _timer=new QTimer(this);
+    connect(_timer,&QTimer::timeout,this,&MainWindow::on_updateProgressDialog);
+    connect(_progressDialog,&QProgressDialog::canceled,this,&MainWindow::on_cancelProgressDialog);
+    _timer->start(2);
+}
+void MainWindow::on_updateProgressDialog(){
+    _counter++;
+    if(_counter>5000){
+        _timer->stop();
+        delete _timer;
+        _timer=nullptr;
+        delete _progressDialog;
+        _counter=0;
+        return;
+    }
+    _progressDialog->setValue(_counter);
+}
+
+void MainWindow::on_cancelProgressDialog()
+{
+    _timer->stop();
+    delete _timer;
+    _timer=nullptr;
+    delete _progressDialog;
+    _counter=0;
+    return;
 
 }
 

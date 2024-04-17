@@ -29,6 +29,7 @@ public:
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
+    QPushButton *pushButton_7;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -57,6 +58,9 @@ public:
         pushButton_6 = new QPushButton(centralwidget);
         pushButton_6->setObjectName("pushButton_6");
         pushButton_6->setGeometry(QRect(280, 100, 93, 28));
+        pushButton_7 = new QPushButton(centralwidget);
+        pushButton_7->setObjectName("pushButton_7");
+        pushButton_7->setGeometry(QRect(440, 100, 93, 28));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -80,6 +84,7 @@ public:
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "\346\265\256\347\202\271\345\236\213\350\276\223\345\205\245\346\241\206", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "\346\235\241\347\233\256\345\257\271\350\257\235\346\241\206", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "\346\217\220\347\244\272\345\257\271\350\257\235\346\241\206", nullptr));
+        pushButton_7->setText(QCoreApplication::translate("MainWindow", "\350\277\233\345\272\246\345\257\271\350\257\235\346\241\206", nullptr));
     } // retranslateUi
 
 };
