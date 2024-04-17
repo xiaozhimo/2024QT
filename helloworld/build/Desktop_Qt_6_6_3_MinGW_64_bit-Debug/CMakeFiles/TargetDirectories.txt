@@ -1,0 +1,9 @@
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/helloworld.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/helloworld_autogen_timestamp_deps.dir
+D:/software/qtProject/helloworld/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/helloworld_autogen.dir

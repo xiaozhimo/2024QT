@@ -1,0 +1,6 @@
+build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/debug/moc_mainwindow.cpp
+build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/debug/moc_predefs.h
+build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ui_mainwindow.h
+main.cpp
+mainwindow.cpp
+mainwindow.h
