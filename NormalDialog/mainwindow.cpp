@@ -7,6 +7,11 @@
 #include<QInputDialog>
 #include<QMessageBox>
 #include<QProgressDialog>
+#include<QWizard>
+#include<QVBoxLayout>
+#include<QLabel>
+#include<QButtonGroup>
+#include<QRadioButton>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -134,6 +139,51 @@ void MainWindow::on_cancelProgressDialog()
     delete _progressDialog;
     _counter=0;
     return;
+
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    QWizard wizard(this);
+    wizard.setWindowTitle(tr("向导"));
+    auto page1=new QWizardPage();
+    page1->setTitle(tr("婚恋介绍程序"));
+    auto label1=new QLabel();
+    label1->setText(tr("帮助你找恋人"));
+    auto layout=new QVBoxLayout();
+    layout->addWidget(label1);
+    page1->setLayout(layout);
+    wizard.addPage(page1);
+    QWizardPage *page2=new QWizardPage();
+    page2->setTitle("选择你喜欢的类型");
+    auto group=QButtonGroup(page2);
+    auto btn1=new QRadioButton();
+    btn1->setText("白马王子");
+    group.addButton(btn1);
+    auto btn2=new QRadioButton();
+    btn2->setText("温柔");
+    group.addButton(btn2);
+    auto btn3=new QRadioButton();
+    btn3->setText("可爱");
+    group.addButton(btn3);
+    auto layout2=new QVBoxLayout();
+    for(int i=0;i<group.buttons().size();i++){
+        layout2->addWidget(group.buttons()[i]);
+    }
+    page2->setLayout(layout2);
+    wizard.addPage(page2);
+
+    QWizardPage* page3=new QWizardPage();
+    page3->setTitle("你的缘分到了");
+    auto label3=new QLabel();
+    label3->setText("感谢参与");
+    QVBoxLayout* layout3=new QVBoxLayout();
+    layout3->addWidget(label3);
+    page3->setLayout(layout3);
+    wizard.addPage(page3);
+    wizard.show();
+    wizard.exec();
 
 }
 
