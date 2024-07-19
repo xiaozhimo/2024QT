@@ -21,6 +21,7 @@ private slots:
     void on_actionshowdock_D_triggered();
 
     void on_actionNew_N_triggered();
+    void on_actionEdit_triggered();
 
 private:
     Ui::MainWindow *ui;
